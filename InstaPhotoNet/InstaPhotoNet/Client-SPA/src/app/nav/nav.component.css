@@ -1,0 +1,13 @@
+.navbar {
+  color:black;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
