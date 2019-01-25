@@ -15,7 +15,10 @@ namespace InstaPhotoNet.Dtos
 
         public string PublicId { get; set; }
 
-        public string UserKnownAs { get; set; }
+        //public string UserKnownAs { get; set; }
+
+        //public string UserName { get; set; } 
+
 
 
 

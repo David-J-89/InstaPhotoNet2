@@ -13,6 +13,11 @@
         "isProfile": true,
         "description": "Commodo deserunt consectetur officia ullamco minim deserunt commodo reprehenderit qui do commodo."
       }
+    ],
+    "Comments": [
+      {
+        "body":  "Hello Great Pic!, Where are you at?"
+      }
     ]
   },
   {
@@ -29,6 +34,7 @@
         "isProfile": true,
         "description": "Ullamco occaecat commodo et velit aute aliquip in."
       }
+      
     ]
   },
   {
@@ -75,9 +81,15 @@
       {
         "url": "https://randomuser.me/api/portraits/women/72.jpg",
         "isProfile": true,
-        "description": "Cupidatat dolor adipisicing proident ipsum est ex."
+        "description": "Cupidatat dolor adipisicing proident ipsum est ex.",
+        "Comments": [
+          {
+            "body": "Hello Great Pic!, Where are you at?"
+          }
+        ]
       }
     ]
+    
   },
   {
     "Username": "Jolene",

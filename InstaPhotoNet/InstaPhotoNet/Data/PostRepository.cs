@@ -25,6 +25,12 @@ namespace InstaPhotoNet.Data
             _context.Remove(entity);
         }
 
+        public IQueryable<Comment> GetCommentsByPhoto(int photoId)
+        {
+            var commentsbphoto = _context.Comments.Where(r => r.PhotoId == photoId);
+            return commentsbphoto;
+        }
+
         public async Task<Photo> GetPhoto(int id)
         {
             var photo = await _context.Photos.FirstOrDefaultAsync(p => p.Id == id);
@@ -34,10 +40,26 @@ namespace InstaPhotoNet.Data
 
         public async Task<IEnumerable<Photo>> GetPhotos()
         {
-            var photos = await _context.Photos.OrderBy(photo => photo.DateAdded).ToListAsync();
+            var photos = await _context.Photos.Include(c => c.Comments).ToListAsync();
 
             return photos;
+
+            //var photos = await _context.Photos.Include(u => u.User).ToListAsync();            
+
+            //return photos;       
+
         }
+
+        public async Task<IEnumerable<Photo>> GetPhotosIncludingComments()
+        {
+            var photosic = await _context.Photos.Include(c => c.Comments).ToListAsync();
+            return photosic;
+        }
+
+        //public Task<IQueryable<Photo>> GetPhotosIncludingComments()
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
         public async Task<Photo> GetProfilePhotoForUser(int userId)
         {
@@ -63,5 +85,17 @@ namespace InstaPhotoNet.Data
         {
             return await _context.SaveChangesAsync() > 0;
         }
+
+        //Task<IEnumerable<Comment>> IPostRepository.GetCommentsByPhoto(int photoId)
+        //{
+        //    var commentrep = _context.Photos.Where(r => r.Id == photoId).ToListAsync();
+        //    return commentrep;
+        //}
+
+        //IQueryable<Photo> IPostRepository.GetPhotosIncludingComments()
+        //{
+        //    var commentsbphoto = _context.Photos.Include("Comments");
+        //    return commentsbphoto;
+        //}
     }
 }

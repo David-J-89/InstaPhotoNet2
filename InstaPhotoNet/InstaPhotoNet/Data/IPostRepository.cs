@@ -21,5 +21,9 @@ namespace InstaPhotoNet.Data
         Task<Photo> GetPhoto(int id);
 
         Task<Photo> GetProfilePhotoForUser(int userId);
+
+        Task<IEnumerable<Photo>> GetPhotosIncludingComments();
+
+        //Task<IEnumerable<Comment>> GetCommentsByPhoto(int photoId);
     }
 }

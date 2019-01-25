@@ -25,7 +25,9 @@ namespace InstaPhotoNet.Controllers
         {
             var photos = await _repo.GetPhotos();
             var postsToReturn = _mapper.Map<IEnumerable<PhotoForReturnDto>>(photos);
+
             return Ok(postsToReturn);
+
         }
     }
 }

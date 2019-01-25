@@ -10,5 +10,6 @@ namespace InstaPhotoNet.Dtos
         public DateTime DateAdded { get; set; }
         public bool IsProfile { get; set; }
         public int UserId { get; set; }
+        //public string UserName { get; set; }
     }
 }

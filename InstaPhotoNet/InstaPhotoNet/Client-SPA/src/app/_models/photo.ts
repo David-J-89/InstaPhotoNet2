@@ -5,7 +5,9 @@ export interface Photo {
   dateAdded: Date;
   isProfile: boolean;
   userId: number;
-  //userKnownAs: string;
-  
+  userName: string;  
+  //userKnownAs: string; 
   
 }
+
+

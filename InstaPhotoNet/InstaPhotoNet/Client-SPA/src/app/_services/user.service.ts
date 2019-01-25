@@ -21,6 +21,8 @@ export class UserService {
     return this.http.get<User[]>(this.baseUrl + 'users');
   }
 
+  
+
     //let params = new HttpParams();
 
     //if (page != null && itemsPerPage != null) {

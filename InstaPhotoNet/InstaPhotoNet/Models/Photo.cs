@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace InstaPhotoNet.Models
 {
@@ -16,9 +17,19 @@ namespace InstaPhotoNet.Models
 
         public string PublicId { get; set; }
 
+        public int UserId { get; set; }
+
         public User User { get; set; }
 
-        public int UserId { get; set; }
+        public string UserKnownAs { get; set; }
+
+        //public string UserName { get; set; }
+
+        public ICollection<Comment> Comments { get; set; }
+
+
+
+
 
         //public string UserKnownAs { get; set; }
 

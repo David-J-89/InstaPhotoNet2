@@ -10,9 +10,10 @@ import { User } from 'src/app/_models/user';
   templateUrl: './photo-list.component.html',
   styleUrls: ['./photo-list.component.css']
 })
-export class PhotoListComponent implements OnInit {
+export class PhotoListComponent implements OnInit {  
   photos: Photo[];
   users: User[];
+  comments: Comment[];
 
   constructor(private postService: PostService, private alertify: AlertifyService) { }
 

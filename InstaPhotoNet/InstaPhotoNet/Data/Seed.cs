@@ -15,7 +15,7 @@ namespace InstaPhotoNet.Data
 
         public void SeedUsers()
         {
-            var userData = System.IO.File.ReadAllText("Data/UserSeedData.json");
+            var userData = System.IO.File.ReadAllText("Data/UserSeedData2.json");
             var users = JsonConvert.DeserializeObject<List<User>>(userData);
             foreach (var user in users)
             {

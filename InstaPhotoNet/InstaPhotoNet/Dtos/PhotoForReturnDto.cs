@@ -13,5 +13,13 @@ namespace InstaPhotoNet.Dtos
         public int UserId { get; set; }
         //public string UserKnownAs { get; set; }
 
+        //public PhotoForReturnDto(User user)
+        //{          
+
+
+        //        UserKnownAs = user.KnownAs;
+
+
+        //}
     }
 }

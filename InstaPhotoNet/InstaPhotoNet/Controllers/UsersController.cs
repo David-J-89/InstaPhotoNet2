@@ -4,7 +4,6 @@ using InstaPhotoNet.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -29,18 +28,18 @@ namespace InstaPhotoNet.Controllers
         {
             var users = await _repo.GetUsers();
 
-            var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
+            //var usersToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
 
-            return Ok(usersToReturn);
+            return Ok(users);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser(int id)
         {
             var user = await _repo.GetUser(id);
-            var userToReturn = _mapper.Map<UserForDetailedDto>(user);
+            //var userToReturn = _mapper.Map<UserForDetailedDto>(user);
 
-            return Ok(userToReturn);
+            return Ok(user);
         }
 
         [HttpPut("{id}")]
